@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Winter Wonders - Home</title>
+    <style>
+        body{
+            font-family: Harrington;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-image: url('815776.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 100px;
+        }
+
+        .mainbox{
+            min-height: 100px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 0 50px rgba(0,0,0,0.2);
+        }
+
+        header{
+            background-color: rgba(192, 57, 43, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #27ae60;
+            position: relative;
+            z-index: 20;
+        }
+        header h1{
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        header p{
+            font-size: 1.2em;
+        }
+
+        nav{
+            background-color: rgba(39, 174, 96, 0.9);
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            z-index: 20;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #e74c3c; 
+        }
+        nav a.active {
+            background-color: #f1c40f;
+            color: #333;
+        }
+		main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white; 
+            border: 10px outset red;
+			border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 15;
+        }
+        main h2 {
+            color: #c0392b;
+            border-bottom: 2px solid #27ae60;
+            padding-bottom: 10px;
+        }
+        main h3 {
+            color: #27ae60;
+            margin-top: 30px;
+        }
+        main p {
+            line-height: 1.6;
+        }
+        main ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .funbutton {
+            display: inline-block;
+            background-color: #f1c40f;
+            color: #333;
+            font-family: Harrington;
+			text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .funbutton:hover {
+            background-color: #e74c3c;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        #giftmessage {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-out, opacity 0.7s ease-out;
+            opacity: 0;
+            margin-top: 20px;
+            background-color: #ffe0b2;
+            border: 2px dashed #ff8c00;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.3em;
+            font-style: italic;
+            color: #8b4513;
+            padding: 0 20px;
+        }
+
+        #giftmessage.show {
+            max-height: 200px;
+            opacity: 1;
+            padding: 20px;
+        }
+
+        #playmusicbutton {
+            font-family: Harrington;
+			background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+        #playmusicbutton:hover {
+            background-color: #2980b9;
+        }
+
+
+        footer {
+            background-color: rgba(52, 73, 94, 0.9);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 5px solid #27ae60;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <header>
+        <h1> Welcome to Edgerington's Christmas</h1>
+        <p>Winter is now hear and join me for an Edgy Christmas</p>
+        </header>
+		<nav>
+        <a href="home.html" class="active">Home</a>
+        <a href="decorations.html">Christmas Decorations</a>
+        </nav>
+
+        <main>
+            <h2>The Wonders of Winter</h2>
+            <p>Winter, the coldest season of the year, is a time of quiet beauty and festive cheer. From the serene blanket of snow covering landscapes to the joyous celebrations that bring families together, winter holds a special charm. It's the season for cozy nights by the fireplace, warm drinks, and glittering lights.</p>
+            <p>Did you know that snowflakes are formed when tiny water droplets freeze around a dust particle in the atmosphere? Each snowflake is unique, a testament to nature's intricate artistry!</p>
+
+            <h3>Winter Facts...</h3>
+            <ul>
+                <li>Snow can be yellow, orange, green, and purple.</li>
+                <li>There’s an annual International Hair Freezing Contest in Canada every February.</li>
+                <li>Red squirrels make mushroom jerky to prepare for the winter.</li>
+            </ul>
+			<div style="text-align: center; margin-top: 40px;">
+            <button class="funbutton" onclick="toggleGiftMessage()">
+            Open Your Christmas Present
+            </button>
+            <audio id="christmas" src="deckthehalls.mp3" preload="auto"></audio>
+            <button id="playmusicbutton" onclick="document.getElementById('christmas').play()">
+            Play Christmas Music!
+            </button>
+                <div id="giftmessage">
+                    <p>Wishing you warmth, joy, and peace this holiday season!</p>
+                    <p>May your days be merry and bright!</p>
+                </div>
+            </div>
+			<div style="text-align: center; margin-top: 40px;">
+               <a href="decorations.html" class="funbutton">
+                    Explore Christmas Decorations>
+                </a>
+            </div>
+        </main>
+		<footer>
+        <p>Made by Thomas Etherington<br>Merry Christmas!!</p>
+        </footer>
+    </div>
+	<script>
+        function toggleGiftMessage() {
+            const messageDiv = document.getElementById('giftmessage');
+            messageDiv.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

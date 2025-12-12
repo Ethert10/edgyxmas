@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Merry Edgemas!</title>
+    <style>
+		body {
+            font-family: Harrington;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-image: url('decs.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 100px;
+        }
+
+        .mainbox{
+            min-height:100vh;
+			position:relative;
+            z-index:10;
+            box-shadow:0 0 50px rgba(0,0,0,0.2);
+        }
+
+        header{
+            background-color: rgba(192, 57, 43, 0.9);
+            color:white;
+            padding:20px;
+            text-align: center;
+            border-bottom: 5px solid #27ae60;
+            position: relative;
+            z-index: 20;
+        }
+        header h1{
+            margin:0;
+            text-shadow:2px 2px 4px rgba(0,0,0,0.3);
+        }
+        header p{
+            font-size: 1.2em;
+        }
+
+        nav{
+            background-color: rgba(39, 174, 96, 0.9);
+            padding: 10px 0;
+            text-align:center;
+            position: relative;
+            z-index: 20;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        nav a:hover{
+            background-color: #e74c3c; 
+        }
+        nav a.active{
+            background-color: #f1c40f; 
+            color: #333;
+        }
+
+        main{
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white; 
+            border: 10px outset green;
+			border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 15;
+        }
+        main h2 {
+            color: #c0392b;
+            border-bottom: 2px solid #27ae60;
+            padding-bottom: 10px;
+        }
+        main h3{
+            color: #27ae60;
+            margin-top: 30px;
+        }
+        main p{
+            line-height: 1.6;
+        }
+        main ul{
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .funbutton{
+            display: inline-block;
+            background-color: #f1c40f; 
+            color: #333;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .funbutton:hover{
+            background-color: #e74c3c;
+            color: white;
+            transform: scale(1.05);
+        }
+        #playmusicbutton{
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+        #playmusicbutton:hover{
+            background-color: #2980b9;
+        }
+        footer{
+            background-color: rgba(52, 73, 94, 0.9);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 5px solid #27ae60;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <header>
+            <h1>Edgy Christmas Decorations</h1>
+            <p>Bringing sparkle and joy to your home!</p>
+        </header>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="decorations.html" class="active">Christmas Decorations</a>
+        </nav>
+
+        <main>
+            <h2>The Art of Holiday Decorating</h2>
+            <p>Christmas decorations are a cornerstone of the holiday season, transforming homes and public spaces into magical realms. From twinkling lights to ornate ornaments, each piece contributes to the festive atmosphere.</p>
+            <p>Did you know that the tradition of decorating evergreen trees for Christmas originated in Germany during the 16th century? It was brought to Britain by Queen Victoria's German husband, Prince Albert, in the 19th century, and quickly spread worldwide!</p>
+
+            <h3>Popular Christmas Decorations:</h3>
+            <ul>
+                <li><b>Christmas Trees:</b> Often decorated with lights, tinsel, and baubles.</li>
+                <li><b>Wreaths:</b> Hung on doors as a symbol of welcome.</li>
+                <li><b>Garlands:</b> Used to drape over fireplaces in a festive way.</li>
+                <li><b>Baubles:</b> Glass, plastic, or handcrafted items hung on the tree.</li>
+                <li><b>Fairy Lights:</b> Small, twinkling lights that add a magical glow.</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <audio id="christmas" src="deckthehalls.mp3" preload="auto"></audio>
+                <button id="playmusicbutton" onclick="document.getElementById('christmas').play()">Play Christmas Music</button>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="home.html" class="funbutton">Back to the snowy home</a>
+            </div>
+        </main>
+
+        <footer>
+          <p>Made by Thomas Etherington<br>Merry Christmas!!</p>
+        </footer>
+    </div>
+</body>
+</html>
